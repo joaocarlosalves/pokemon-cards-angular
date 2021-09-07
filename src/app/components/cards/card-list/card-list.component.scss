@@ -1,0 +1,30 @@
+.card-list-container {
+
+}
+
+.paginator {
+    width: 100%;
+
+    ul {
+        width: 100%;
+
+        li {
+            padding: 5px;
+            cursor: pointer;
+            display: inline;
+            border-right: 1px solid rgb(209, 209, 209);
+
+            &:hover,
+            &.pag-act {
+                background-color: red;
+                color: white;
+                font-weight: bold;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}
+

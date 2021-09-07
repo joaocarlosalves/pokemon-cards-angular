@@ -1,1 +1,19 @@
-<p>card-list works!</p>
+<div class='card-list-container'>
+    <ul>
+        <li *ngFor='let card of cards'>
+            <img [src]="card['images']['small']" />
+        </li>
+    </ul>
+</div>
+
+<div class='paginator'>
+    <ul>
+        <li 
+            [class.pag-act]='currentPage === i'
+            *ngFor='let page of pages; let i = index;'
+            (click)='changePage(i)'
+        >
+            {{ i }}            
+        </li>
+    </ul>
+</div>

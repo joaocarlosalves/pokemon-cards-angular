@@ -15,6 +15,20 @@ export class PokeService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getAllCards(page: number): Observable<any> {
+    return this.httpClient.get(`${this.url}/cards?page=${page}&pageSize=250`)
+      .pipe(
+        retry(2),
+        catchError(this.handleError))
+  }
+
+  getCard(id: string): Observable<any> {
+    return this.httpClient.get(`${this.url}/cards/${id}`)
+      .pipe(
+        retry(2),
+        catchError(this.handleError))
+  }
+
   getTypes(): Observable<any> {
     return this.httpClient.get(`${this.url}/types`)
       .pipe(
