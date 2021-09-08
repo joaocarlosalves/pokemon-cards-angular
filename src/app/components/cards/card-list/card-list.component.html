@@ -1,7 +1,18 @@
 <div class='card-list-container'>
     <ul>
         <li *ngFor='let card of cards'>
-            <img [src]="card['images']['small']" />
+            <a routerLink='/card/{{ card["id"] }}'>
+                <img [src]="card['images']['small']" />
+
+                <div class='card-info'>
+                    <h6>{{ card['name'] }}</h6>
+    
+                    <div>
+                        <span>{{ card['types'] ? card['types'][0] : 'NO TYPE' }}</span>
+                        <span>{{ card['id'] ? card['id'] : 'NO ID' }}</span> 
+                    </div>
+                </div>
+            </a>
         </li>
     </ul>
 </div>

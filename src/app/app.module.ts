@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CardListComponent } from './components/cards/card-list/card-list.component';
 import { CardComponent } from './components/cards/card/card.component';
-import { HomeComponent } from './components/home/home.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SearchBarComponent,
     CardListComponent,
     CardComponent,
-    HomeComponent,
-    LoadingComponent
+    LoadingComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

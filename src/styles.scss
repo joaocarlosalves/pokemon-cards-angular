@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap');
+@import './variables.scss';
 
 * {
     outline: none;
@@ -8,7 +9,10 @@
 }
 
 body {
-    font-family: 'Red Hat Display', 'Helvetica', 'Arial', sans-serif;
+    font-family: $mainfont;
+    background: url('./assets/images/bg.png') no-repeat center center fixed; 
+    background-size: cover;
+    overflow: overlay;
 }
 
 a, button {
@@ -17,4 +21,23 @@ a, button {
 
 ul {
     list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 25px;
+    border-radius: 500px;
+    background: $transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: $transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $green;
+    border-radius: 500px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $hovergreen;
 }

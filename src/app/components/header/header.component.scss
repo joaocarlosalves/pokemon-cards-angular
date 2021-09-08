@@ -1,0 +1,36 @@
+header {
+   width: 100%;
+   padding: 20px 2%;
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   top: 0;
+
+   .logo {
+      width: 350px;
+      animation: logo infinite 2s ease;
+      transition: all ease-in-out;
+   }
+}
+
+@keyframes logo {
+   0% {
+       transform: scale(1) rotate(0deg);
+   }
+
+   25% {
+       transform: scale(1.05) rotate(-1deg);
+   }
+
+   50% {
+       transform: scale(1) rotate(0deg);
+   }
+
+   75% {
+       transform: scale(1.1) rotate(2deg);
+   }
+
+   100% {
+       transform: scale(1) rotate(0deg);
+   }
+}

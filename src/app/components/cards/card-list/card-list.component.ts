@@ -15,11 +15,9 @@ export class CardListComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokeService.getAllCards(1).subscribe(cards => {
-      console.log(cards);
       this.pages = new Array(parseInt(Math.round(cards.totalCount / cards.pageSize).toString()));
-      console.log(this.pages);
       this.cards = cards.data;
-      console.log(this.cards)
+      console.log(this.cards);
     });
   }
 
