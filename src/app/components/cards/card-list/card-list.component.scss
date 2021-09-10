@@ -40,14 +40,15 @@
         flex-wrap: wrap;
 
         li {
-            background: #fff;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.5); 
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
             padding: 20px 20px 40px;
             margin: 95px 22px;
             width: 350px;
             flex-direction: column;
             display: flex;
-            box-shadow: 0 10px 35px $green;
+            box-shadow: 0 10px 30px $green;
             transition: all 3s ease-in-out;
             cursor: pointer;
 
@@ -104,12 +105,8 @@
                 img {
                     width: 86%;
                     margin: -130px 7% 0;
-                    box-shadow: 0px -5px 20px rgba(255, 0, 130, .5);
-                    border: double 4px transparent;
-                    border-radius: 15px;
-                    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #e98a98, #5dffee);
-                    background-origin: border-box;
-                    background-clip: content-box, border-box;
+                    border-width: 5px;
+                    @include image-gradient-border; 
                 }
             }
         }

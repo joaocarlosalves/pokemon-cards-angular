@@ -5,6 +5,7 @@ import { CardComponent } from './components/cards/card/card.component';
 
 const routes: Routes = [
   { path: '', component: CardListComponent },
+  { path: 'cards', component: CardListComponent },
   { path: 'card/:id', component: CardComponent },
 ];
 

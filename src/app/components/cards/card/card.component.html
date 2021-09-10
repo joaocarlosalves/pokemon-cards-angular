@@ -1,1 +1,69 @@
-<p>card id: {{ id }}</p>
+<section *ngIf='!error'>
+   <div class='card-container'>
+      <img src='{{ cardImage }}' class='card-large-image' />
+
+      <div class='card-info-container'>
+         <div class='scroll-container'>
+
+            <!-- Header -->
+            <div class='card-info-header'>
+               <div class='full flex space-between'>
+                  <h1>{{ card['name'] }}</h1>
+
+                  <div class='flex space-between mt10'>
+                     <img [src]='typeImg' class='type-icon' />
+
+                     <span class='hp-txt'>hp <b>{{ card['hp'] }}</b></span>
+                  </div>
+               </div>
+
+               <div class='full flex space-between sub-title-info-container'>
+                  <div class='flex space-between supertype-container'>
+                     <span class='supertype'>{{ card['supertype'] }}</span>
+
+                     <b class='bullet'>•</b>
+
+                     <ul>
+                        <li *ngFor='let subtype of subtypes'>{{ subtype }}</li>
+                     </ul>   
+                  </div>
+
+                  <span class='card-id'>{{ card['id'] }}</span>
+               </div>
+            </div>
+            <!-- Header -->
+
+            <!-- Info 1 -->
+            <div class='card-info-cols flex space-between full'>
+               <div class='col-a'>
+                  <h6 class='card-info-sub-title full'>Attack List</h6>
+
+                  <ul>
+                     <li *ngFor='let attack of card["attacks"]'>
+                        <div class='attack-title-container'>
+                           <span class='name'>{{ attack['name'] }}</span>
+                           <span class='damage'>{{ attack['damage'] }}</span>                           
+                        </div>
+
+                        <div class='full attack-text'>{{ attack['text'] }}</div>
+
+                        <div class='full cost-container'>
+                           <span>Cost:</span>
+                           <img *ngFor='let cost of attack["cost"]' src='./../../../../assets/images/symbols/{{ cost | lowercase }}.png' />
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class='col-b'>B</div>
+            </div>
+            <!-- Info 1 -->
+
+         </div>
+      </div>
+   </div> 
+</section>
+
+<section class='error-container' *ngIf='error'>
+   
+</section>

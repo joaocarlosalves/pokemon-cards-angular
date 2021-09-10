@@ -4,6 +4,33 @@ $green: #004950;
 $hovergreen: #00474d;
 $lightgreen: #126269;
 $cardtitle: #2b8882;
+$subtitle: #467a70;
 $darkgray: #222;
 $gray: rgb(125, 125, 125);
 $transparent: rgba(0, 0, 0, .0);
+
+@mixin image-gradient-border {
+   box-shadow: 0px -5px 20px rgba(255, 0, 130, .5);
+   border-style: double;
+   border-color: transparent;
+   border-radius: 15px;
+   background-image: linear-gradient(white, white), radial-gradient(circle at top left, #e98a98, #5dffee);
+   background-origin: border-box;
+   background-clip: content-box, border-box;
+}
+
+.mt10 {
+   margin-top: 10px;
+}
+
+.full {
+   width: 100%;
+}
+
+.flex {
+   display: flex;
+}
+
+.space-between {
+   justify-content: space-between;
+}

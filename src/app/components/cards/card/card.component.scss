@@ -1,0 +1,180 @@
+@import './../../../../variables.scss';
+
+.card-container {
+   position: relative;
+   width: 90%;
+   margin: 200px 5%;
+   display: flex;
+   align-items: center;
+
+   .card-info-container {
+      background: rgba(255, 255, 255, 0.2);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+      width: 70%;
+      padding: 40px 40px 40px 100px;
+      min-height: 800px;
+
+      .scroll-container {
+         overflow: auto;
+         height: 90vh;
+         width: 100%;
+         padding-right: 40px;
+
+         .card-info-header {
+            .sub-title-info-container {
+               border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+               padding-bottom: 5px;
+               margin: 5px 0 20px 0;
+               font-family: $mainfont;
+
+               .card-id {
+                  font-weight: bold;
+                  font-size: 22px;
+                  color:rgba(0, 0, 0, .4)
+               }
+
+               .supertype-container {
+                  height: 30px;
+                  line-height: 20px;
+                  font-size: 20px;
+                  color: $lightgreen;
+
+                  .bullet {
+                     font-size: 50px;
+                     margin: 0 15px;
+                  }
+
+                  .supertype {
+                     font-weight: bold;
+                  }
+
+                  ul {
+                     li {
+                        font-weight: 300;
+                     }
+                  }
+               }
+            }
+
+            h1 {
+               font-size: 40px;
+               color: $green;
+               font-family: $mainfont;
+               font-size: 60px;
+               text-transform: uppercase;
+               letter-spacing: -1px;
+            }
+   
+            .type-icon {
+               width: 60px;
+               height: 60px;
+               margin-right: 15px;
+            }
+   
+            .hp-txt {
+               font-size: 25px;
+               font-family: $mainfont;
+               color: $green;
+               height: 60px;
+               line-height: 55px;
+               letter-spacing: -1px;
+   
+               b {
+                  font-size: 50px;
+                  font-weight: 900;
+               }
+            }
+         }
+
+         .card-info-cols {
+            margin-top: 40px;
+            font-family: $mainfont;
+
+            .col-a, .col-b {
+               width: 48%;
+
+               .card-info-sub-title {
+                  font-weight: 700px;
+                  font-size: 40px;
+                  color: $lightgreen;
+               }
+            }
+
+            .col-a {
+               ul {
+                  margin-top: 10px;
+
+                  li {
+                     margin-bottom: 30px;
+
+                     .attack-title-container {
+                        font-size: 25px;
+                        color: $subtitle;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        padding-bottom: 3px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;  
+
+                        .name {
+                           margin-top: 16px;
+                           font-weight: 500;
+                           text-shadow: 0 0 1px $subtitle;
+                        }
+
+                        .damage { 
+                           font-size: 40px;
+                           font-weight: 600;
+                        }
+                     }
+
+                     .attack-text {
+                        margin-bottom: 10px;
+                        font-size: 19px;
+                        color: $lightgreen;
+                        font-style: italic;
+                        width: 100%;
+                     }
+
+                     .cost-container {
+                        height: 50px;
+                        line-height: 50px;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                           margin-right: 10px;
+                           color: $lightgreen;
+                           font-size: 15px;
+                           font-weight: bold;
+                        }
+
+                        img {
+                           width: 40px;
+                           height: 40px;
+                           margin-right: 5px;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .card-large-image {
+      height: 60%;
+      position: relative;
+      display: block;
+      margin-right: -100px;
+      z-index: 2;
+      transform: scale(.85);
+      border-width: 7px;
+      @include image-gradient-border;
+   }
+}
