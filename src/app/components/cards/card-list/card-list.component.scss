@@ -78,31 +78,37 @@
                         height: 40px;
                     }
 
-                    div {
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
+                    .card-info-text-home {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        color: $cardtitle;
+                        font-weight: bold;
+                    }
 
-                        span {
-                            text-transform: uppercase;
+                    .card-info-text-container {
+                        height: 50px;
+                        line-height: 50px;
+                        align-items: center;
 
-                            &:first-child {
-                                font-size: 18px;
-                                color: $cardtitle;
-                                font-weight: bold;
-                            }
+                        .type-icon-home {
+                            height: 50px;
+                            margin-right: 10px;
+                        }
 
-                            &:last-child {
-                                color: $gray;
-                                font-size: 16px;
+                        div {
+                            height: 50px;
+                            line-height: 50px;
+
+                            span {
+                                position: absolute;
+                                height: 50px;
+                                line-height: 50px;
                             }
                         }
                     }
                 }
 
-
-
-                img {
+                .card-img {
                     width: 86%;
                     margin: -130px 7% 0;
                     border-width: 5px;

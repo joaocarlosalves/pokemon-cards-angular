@@ -1,5 +1,10 @@
 @import './../../../../variables.scss';
 
+.level {
+   font-weight: 900;
+   font-size: 20px;
+}
+
 .card-container {
    position: relative;
    width: 90%;
@@ -94,19 +99,15 @@
             font-family: $mainfont;
 
             .col-a, .col-b {
-               width: 48%;
+               width: 47%;
 
                .card-info-sub-title {
                   font-weight: 700px;
                   font-size: 40px;
                   color: $lightgreen;
                }
-            }
 
-            .col-a {
                ul {
-                  margin-top: 10px;
-
                   li {
                      margin-bottom: 30px;
 
@@ -161,6 +162,33 @@
                         }
                      }
                   }
+               }
+            }
+
+            .col-a {
+               ul {
+                  margin-top: 10px;
+               }
+            }
+
+            .col-b {
+               .rarity {
+                  width: 100%;
+                  font-size: 25px;
+                  font-family: $mainfont;
+                  color: $subtitle;
+                  margin-top: 25px;
+                  display: block;
+                  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                  padding-bottom: 8px;
+               }
+            }
+
+            .weakness {
+               img {
+                  width: 50px;
+                  height: 50px;
+                  margin: 10px 10px 0 0;
                }
             }
          }

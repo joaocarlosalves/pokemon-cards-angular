@@ -2,14 +2,18 @@
     <ul>
         <li *ngFor='let card of cards'>
             <a routerLink='/card/{{ card["id"] }}'>
-                <img [src]="card['images']['small']" />
+                <img class='card-img' [src]="card['images']['small']" />
 
                 <div class='card-info'>
                     <h6>{{ card['name'] }}</h6>
     
-                    <div>
-                        <span>{{ card['types'] ? card['types'][0] : 'NO TYPE' }}</span>
-                        <span>{{ card['id'] ? card['id'] : 'NO ID' }}</span> 
+                    <div class='flex full space-between card-info-text-container'>
+                        <div>
+                            <img class='type-icon-home' src='./../../../../assets/images/symbols/{{ card["types"][0] | lowercase }}.png' />
+                            <span class='card-info-text-home'>{{ card['types'] ? card['types'][0] : 'NO TYPE' }}</span>
+                        </div>
+
+                        <span class='card-info-text-home'>{{ card['id'] ? card['id'] : 'NO ID' }}</span> 
                     </div>
                 </div>
             </a>
