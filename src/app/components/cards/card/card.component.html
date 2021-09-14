@@ -60,7 +60,7 @@
    
                            <div class='full cost-container'>
                               <span>Cost:</span>
-                              <img *ngFor='let cost of attack["cost"]' src='./../../../../assets/images/symbols/{{ cost | lowercase }}.png' />
+                              <img *ngFor='let cost of attack["cost"]' src='assets/images/symbols/{{ cost | lowercase }}.png' />
                            </div>
                         </li>
                      </ul>
@@ -81,7 +81,7 @@
 
                      <ul>
                         <li class='flex space-between full weakness' *ngFor='let weakness of card["weaknesses"]'>
-                           <img src='./../../../../assets/images/symbols/{{ weakness["type"] | lowercase }}.png' />
+                           <img src='assets/images/symbols/{{ weakness["type"] | lowercase }}.png' />
 
                            <div class='attack-title-container'>
                               <span class='name'>{{ weakness['type'] }}</span>
@@ -106,5 +106,5 @@
 </section>
 
 <section class='error-container' *ngIf='error'>
-   <img src='./../../../../assets/images/card-not-found.png' />
+   <img src='assets/images/card-not-found.png' />
 </section>

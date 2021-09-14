@@ -27,7 +27,7 @@ export class CardComponent implements OnInit {
     .subscribe(card => {
       if(card && !card.error) {
         this.card = card.data;
-        this.typeImg = `./../../../assets/images/symbols/${ this.card['types'][0].toLowerCase() }.png`;
+        this.typeImg = `assets/images/symbols/${ this.card['types'][0].toLowerCase() }.png`;
         this.cardImage = this.card['images']['large'];
 
         if(this.card['subtypes'][0] !== '') {

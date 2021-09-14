@@ -1,10 +1,5 @@
 @import './../../../../variables.scss';
 
-.level {
-   font-weight: 900;
-   font-size: 20px;
-}
-
 .card-container {
    position: relative;
    width: 90%;
@@ -327,38 +322,5 @@
       margin-top: 340px;
       
       backdrop-filter: blur(10px);
-   }
-}
-
-.flavor-text {
-   font-size: 18px;
-   font-style: italic;
-   color: darkslategrey;
-   font-weight: 100;
-   margin-bottom: 10px;
-}
-
-.error-container {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-
-   img {
-      max-width: 900px;
-      min-width: 200px;
-      width: 40%;
-      margin-top: 150px;
-   }
-}
-
-.logo-set {
-   width: 100%;
-   display: block;
-   float: left;
-   max-width: 350px;
-   min-width: 150px;
-   
-   @media screen and (max-width: 1024px) {
-      margin-bottom: 30px;
    }
 }
