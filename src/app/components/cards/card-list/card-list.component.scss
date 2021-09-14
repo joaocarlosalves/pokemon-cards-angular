@@ -117,21 +117,37 @@
             }
         }
     }
+
+    
+    @media screen and (max-width: 1024px) {
+        margin-top: 360px;
+    }
 }
 
 .paginator {
     width: 100%;
 
     ul {
-        width: 100%;
+        width: 40%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin: 20px 30%;
+        display: flex;
+        height: 80px;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
 
         li {
-            padding: 5px;
             cursor: pointer;
-            display: inline;
-            border-right: 1px solid rgb(209, 209, 209);
             width: 40px;
             height: 40px;
+            line-height: 40px;
+            padding: 0px 20px;
+            text-align: center;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover,
             &.pag-act {

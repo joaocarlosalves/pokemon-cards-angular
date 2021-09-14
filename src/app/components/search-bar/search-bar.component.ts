@@ -14,4 +14,8 @@ export class SearchBarComponent implements OnInit {
     this.pokeService.getTypes().subscribe(data => console.log(data));
   }
 
+  search(value: string) {
+    console.log(value);
+  }
+
 }

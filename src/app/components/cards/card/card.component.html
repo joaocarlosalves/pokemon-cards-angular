@@ -7,10 +7,10 @@
 
             <!-- Header -->
             <div class='card-info-header'>
-               <div class='full flex space-between'>
+               <div class='card-info-header-title-hp'>
                   <h1>{{ card['name'] }}</h1>
 
-                  <div class='flex space-between mt10'>
+                  <div class='hp-container'>
                      <img [src]='typeImg' class='type-icon' />
 
                      <span class='hp-txt'>hp <b>{{ card['hp'] }}</b></span>
@@ -18,7 +18,7 @@
                </div>
 
                <div class='full flex space-between sub-title-info-container'>
-                  <div class='flex space-between supertype-container'>
+                  <div class='supertype-container'>
                      <span class='supertype'>{{ card['supertype'] }}</span>
 
                      <b class='bullet'>•</b>
@@ -35,6 +35,10 @@
                   <span class='card-id'>{{ card['id'] }}</span>
                </div>
             </div>
+
+            <div class='full flavor-text'>
+               {{ card['flavorText'] }}
+            </div>
             <!-- Header -->
 
 
@@ -42,23 +46,31 @@
             <div class='card-info-cols flex space-between full'>
                <!-- Col A -->
                <div class='col-a'>
-                  <h6 class='card-info-sub-title full'>Attack List</h6>
+                  <div class='full'>
+                     <h6 class='card-info-sub-title full'>Attack List</h6>
 
-                  <ul>
-                     <li *ngFor='let attack of card["attacks"]'>
-                        <div class='attack-title-container'>
-                           <span class='name'>{{ attack['name'] }}</span>
-                           <span class='damage'>{{ attack['damage'] }}</span>                           
-                        </div>
+                     <ul>
+                        <li *ngFor='let attack of card["attacks"]'>
+                           <div class='attack-title-container'>
+                              <span class='name'>{{ attack['name'] }}</span>
+                              <span class='damage'>{{ attack['damage'] }}</span>                           
+                           </div>
+   
+                           <div class='full attack-text'>{{ attack['text'] }}</div>
+   
+                           <div class='full cost-container'>
+                              <span>Cost:</span>
+                              <img *ngFor='let cost of attack["cost"]' src='./../../../../assets/images/symbols/{{ cost | lowercase }}.png' />
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
 
-                        <div class='full attack-text'>{{ attack['text'] }}</div>
-
-                        <div class='full cost-container'>
-                           <span>Cost:</span>
-                           <img *ngFor='let cost of attack["cost"]' src='./../../../../assets/images/symbols/{{ cost | lowercase }}.png' />
-                        </div>
-                     </li>
-                  </ul>
+                  <div class='full'>
+                     <h6 class='card-info-sub-title full'>Set</h6>
+   
+                     <img src='{{ card["set"]["images"]["logo"] }}' class='logo-set' />
+                  </div>
                </div>
                <!-- Col A -->
 
@@ -88,12 +100,11 @@
                <!-- Col B -->
             </div>
             <!-- Info 1 -->
-
          </div>
       </div>
    </div> 
 </section>
 
 <section class='error-container' *ngIf='error'>
-   
+   <img src='./../../../../assets/images/card-not-found.png' />
 </section>

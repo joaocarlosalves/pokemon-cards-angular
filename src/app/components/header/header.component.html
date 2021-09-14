@@ -1,14 +1,16 @@
 <header>
-   <img src='../../../assets/images/logo2.png' class='logo' />
+   <a routerLink='/'>
+      <img src='../../../assets/images/logo2.png' class='logo' />
+   </a>
 
    <div class='container-search-bar'>
-      <nav>
+<!--       <nav>
          <ul>
-            <li>SETS</li>
-            <li>•</li>
-            <li>TYPES</li>
+            <li><a routerLink='sets'>SETS</a></li>
+            <li class='menu-bullet'>•</li>
+            <li><a routerLink='types'>TYPES</a></li>
          </ul>
-      </nav>
+      </nav> -->
    
       <app-search-bar></app-search-bar>
    </div>

@@ -9,6 +9,8 @@ import { CardComponent } from './components/cards/card/card.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HeaderComponent } from './components/header/header.component';
+import { TypesComponent } from './components/types/types.component';
+import { SetsComponent } from './components/sets/sets.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HeaderComponent } from './components/header/header.component';
     CardListComponent,
     CardComponent,
     LoadingComponent,
-    HeaderComponent
+    HeaderComponent,
+    TypesComponent,
+    SetsComponent
   ],
   imports: [
     BrowserModule,

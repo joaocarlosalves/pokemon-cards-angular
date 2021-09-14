@@ -29,11 +29,40 @@
          padding-right: 40px;
 
          .card-info-header {
+            .card-info-header-title-hp {
+               width: 100%;
+               display: flex;
+               justify-content: space-between;
+
+               .hp-container {
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 10px;
+
+                  @media screen and (max-width: 1024px) {
+                     justify-content: flex-start;
+
+                     .type-icon {
+                        width: 50px;
+                        height: 50px;
+                     }
+                  }
+               }
+
+               @media screen and (max-width: 1024px) {
+                  display: block;
+               }
+            }
+
             .sub-title-info-container {
                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                padding-bottom: 5px;
-               margin: 5px 0 20px 0;
+               margin: 5px 0 10px 0;
                font-family: $mainfont;
+
+               @media screen and (max-width: 1024px) {
+                  border-bottom: none;
+                  margin-bottom: 20px;               }
 
                .card-id {
                   font-weight: bold;
@@ -46,10 +75,20 @@
                   line-height: 20px;
                   font-size: 20px;
                   color: $lightgreen;
+                  display: flex;
+                  justify-content: space-between;
+
+                  @media screen and (max-width: 1024px) {
+                     display: block;
+                  }
 
                   .bullet {
                      font-size: 50px;
                      margin: 0 15px;
+
+                     @media screen and (max-width: 1024px) {
+                        display: none;
+                     }
                   }
 
                   .supertype {
@@ -59,6 +98,13 @@
                   ul {
                      li {
                         font-weight: 300;
+                     }
+
+                     
+                     @media screen and (max-width: 1024px) {
+                        display: block;
+                        width: 100%;
+
                      }
                   }
                }
@@ -71,6 +117,11 @@
                font-size: 60px;
                text-transform: uppercase;
                letter-spacing: -1px;
+
+               @media screen and (max-width: 1024px) {
+                  font-size: 30px;
+                  width: 100%;
+               }
             }
    
             .type-icon {
@@ -91,20 +142,44 @@
                   font-size: 50px;
                   font-weight: 900;
                }
+
+               @media screen and (max-width: 1024px) {
+                  font-size: 20px;
+
+                  b {
+                     font-size: 30px;
+                     font-weight: 900;
+                  }
+               }
             }
          }
 
          .card-info-cols {
             margin-top: 40px;
             font-family: $mainfont;
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (max-width: 1024px) {
+               display: block;
+            }
+
 
             .col-a, .col-b {
                width: 47%;
+
+               @media screen and (max-width: 1024px) {
+                  width: 100%;
+               }
 
                .card-info-sub-title {
                   font-weight: 700px;
                   font-size: 40px;
                   color: $lightgreen;
+                  
+                  @media screen and (max-width: 1024px) {
+                     font-size: 20px;
+                  }
                }
 
                ul {
@@ -132,6 +207,18 @@
                            font-size: 40px;
                            font-weight: 600;
                         }
+
+                        @media screen and (max-width: 1024px) {
+                           font-size: 18px;
+
+                           .name {
+                              margin-top: 5px;
+                           }
+
+                           .damage { 
+                              font-size: 30px;
+                           }
+                        }
                      }
 
                      .attack-text {
@@ -140,6 +227,10 @@
                         color: $lightgreen;
                         font-style: italic;
                         width: 100%;
+
+                        @media screen and (max-width: 1024px) {
+                           font-size: 15px;
+                        }
                      }
 
                      .cost-container {
@@ -193,16 +284,81 @@
             }
          }
       }
+
+      @media screen and (max-width: 1024px) {
+         margin-top: 50px;
+         width: 100%;
+         padding: 20px;
+         min-height: unset;
+      }
    }
 
    .card-large-image {
       height: 60%;
       position: relative;
       display: block;
-      margin-right: -100px;
+      margin-right: -135px;
       z-index: 2;
-      transform: scale(.85);
-      border-width: 7px;
+      transform: scale(.80);
+      border-width: 8px;
       @include image-gradient-border;
+      border-radius: 45px;
+
+      @media screen and (min-width: 1025px) and (max-width: 1366px) {
+         margin-right: -105px;
+         margin-left: -30px;
+         width: 40%;
+         border-width: 5px;
+         transform: scale(1);
+      }
+
+      @media screen and (max-width: 1024px) {
+         width: 100%;
+         height: unset;
+         margin-right: unset;
+         margin-left: unset;
+         transform: scale(1);
+         border-width: 5px;
+      }
+   }
+
+   @media screen and (max-width: 1024px) {
+      display: block;
+      margin-top: 340px;
+      
+      backdrop-filter: blur(10px);
+   }
+}
+
+.flavor-text {
+   font-size: 18px;
+   font-style: italic;
+   color: darkslategrey;
+   font-weight: 100;
+   margin-bottom: 10px;
+}
+
+.error-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
+   img {
+      max-width: 900px;
+      min-width: 200px;
+      width: 40%;
+      margin-top: 150px;
+   }
+}
+
+.logo-set {
+   width: 100%;
+   display: block;
+   float: left;
+   max-width: 350px;
+   min-width: 150px;
+   
+   @media screen and (max-width: 1024px) {
+      margin-bottom: 30px;
    }
 }

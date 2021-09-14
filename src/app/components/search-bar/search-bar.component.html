@@ -1,1 +1,14 @@
-<p>search-bar works!</p>
+<div class='search-bar'>
+    <input 
+        type='text' 
+        class='search-input' 
+        (keydown.enter)='search(searchinput.value)' 
+        #searchinput 
+        placeholder="LOOKING FOR A POKEMON CARD?"
+    />
+
+    <button (click)='search(searchinput.value)' class='btn-search'>
+        <span></span>
+        <span></span>
+    </button>
+</div>
