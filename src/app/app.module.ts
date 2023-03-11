@@ -6,11 +6,8 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CardListComponent } from './components/cards/card-list/card-list.component';
 import { CardComponent } from './components/cards/card/card.component';
-import { LoadingComponent } from './components/loading/loading.component';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { HeaderComponent } from './components/header/header.component';
-import { TypesComponent } from './components/types/types.component';
-import { SetsComponent } from './components/sets/sets.component';
+
 
 @NgModule({
   declarations: [
@@ -18,16 +15,12 @@ import { SetsComponent } from './components/sets/sets.component';
     SearchBarComponent,
     CardListComponent,
     CardComponent,
-    LoadingComponent,
-    HeaderComponent,
-    TypesComponent,
-    SetsComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    NgxPaginationModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

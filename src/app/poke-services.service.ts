@@ -3,9 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class PokeService {
   url = 'https://api.pokemontcg.io/v2/';
 
@@ -43,7 +41,6 @@ export class PokeService {
         catchError(this.handleError))
   }
 
-
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) errorMessage = error.error.message;
@@ -51,27 +48,5 @@ export class PokeService {
 
     console.log(errorMessage);
     return throwError(errorMessage);
-  } 
-
-/* 
-
-  getQuestsByClass(_class: any): Observable<any> {
-    return this.httpClient.get(`${this.url}/${_class}`)
-      .pipe(
-        retry(2),
-        catchError(this.handleError))
   }
-
-  updatePlayerInfo(id: any, body: any): Observable<any> {
-    const sendBody = JSON.stringify(body);
-
-    return this.httpClient.post(sendBody, `${ this.url }/${ id }`, this.httpOptions)
-    .pipe(
-      retry(2),
-      catchError(this.handleError))
-  }
-
-
-
-*/
 }

@@ -3,8 +3,7 @@ import { PokeService } from '@app/poke-services.service';
 
 @Component({
   selector: 'app-card-list',
-  templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.scss']
+  templateUrl: './card-list.component.html'
 })
 export class CardListComponent implements OnInit {
   cards = [];

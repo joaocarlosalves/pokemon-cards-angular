@@ -6,36 +6,17 @@
 
                 <div class='card-info'>
                     <h6>{{ card['name'] }}</h6>
-    
+
                     <div class='flex full space-between card-info-text-container'>
                         <div>
                             <img class='type-icon-home' src="assets/images/symbols/{{ card['types'][0] | lowercase }}.png" />
                             <span class='card-info-text-home'>{{ card['types'] ? card['types'][0] : 'NO TYPE' }}</span>
                         </div>
 
-                        <span class='card-info-text-home'>{{ card['id'] ? card['id'] : 'NO ID' }}</span> 
+                        <span class='card-info-text-home'>{{ card['id'] ? card['id'] : 'NO ID' }}</span>
                     </div>
                 </div>
             </a>
         </li>
     </ul>
 </div>
-
-<!-- 
-    
-<div class='paginator'>
-    <ul>
-        <li 
-            [class.pag-act]='currentPage === i'
-            *ngFor='let page of pages; let i = index;'
-            (click)='changePage(i)'
-        >
-            {{ i }}            
-        </li>
-    </ul>
-</div> 
-
-A Api infelizmente é lerda nas respostas e mesmo com algumas trativas, 
-ao trocar de página, não carrega alguns objetos, ocasionando travamento da página.
-
--->
